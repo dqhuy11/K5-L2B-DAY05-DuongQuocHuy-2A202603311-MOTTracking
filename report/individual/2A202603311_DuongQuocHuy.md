@@ -174,7 +174,7 @@ Dán phần tóm tắt in ra từ `src/check_submission.py`:
 
 ## Bonus (nếu làm)
 
-Không làm bonus.
+Chưa làm bonus (file xuất chỉ có 5 track, không có track phụ).
 
 ## 7. Tài liệu tham khảo và công cụ AI đã dùng
 

@@ -180,4 +180,4 @@ Không làm bonus.
 
 - Tài liệu: `README.md`, `RULES.md`, `CHECKPOINTS.md`, `RUBRIC.md`, `docs/GUIDELINE.md`, `docs/MOT_FORMAT.md`, `docs/CVAT_CHEATSHEET.md` và slide lý thuyết Ngày 5.
 - Dữ liệu: MOT17-09, MOTChallenge (Milan et al., 2016), CC BY-NC-SA 3.0.
-- Công cụ AI: Claude Code (Anthropic). Dùng để đọc hai file xuất, chạy `src/check_submission.py`, tổng hợp số keyframe và đoạn `occluded` / `outside` của từng track, vẽ box lên frame để soát cờ quanh frame 100–140, và hỗ trợ viết báo cáo. Toàn bộ nhãn được gán thủ công trên CVAT. Các lỗi ghi ở mục 4 đã được mình xem lại trên CVAT.
+- Công cụ AI: Claude Code (Anthropic). Dùng để đọc hai file xuất, chạy `src/check_submission.py`, tổng hợp số keyframe và đoạn `occluded` / `outside` của từng track, vẽ box lên frame để soát cờ quanh frame 100–140,. Toàn bộ nhãn được gán thủ công trên CVAT

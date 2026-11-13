@@ -1,18 +1,16 @@
-# Báo cáo cá nhân — HoVaTen-MSSV
-
-Đổi tên file theo quy tắc `MSSV_HoTen.md`. Ví dụ: `20241234_NguyenVanAn.md`.
+# Báo cáo cá nhân — DuongQuocHuy-2A202603311
 
 Đoạn video: MOT17-09, 150 frame (frame 1–150), nguồn MOTChallenge, giấy phép CC BY-NC-SA 3.0.
 
 ## 0. Thông tin học viên
 
-- Họ tên:
-- MSSV:
-- Mã đề (A/B/C):
-- Email:
-- Link repository:
-- Giờ bắt đầu:
-- Giờ kết thúc:
+- Họ tên:Dương Quốc Huy
+- MSSV:2A202603311
+- Mã đề :C
+- Email:duongquochuy1107@gmail.com
+- Link repository:https://github.com/dqhuy11/K5-L2B-DAY05-DuongQuocHuy-2A202603311-MOTTracking
+- Giờ bắt đầu:16h00 13/11/2026
+- Giờ kết thúc:12h00 14/11/2026
 
 ## 1. Xem trước đoạn video (CP0)
 

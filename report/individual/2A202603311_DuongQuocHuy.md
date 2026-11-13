@@ -40,12 +40,12 @@ Số keyframe lấy từ kết quả `src/check_submission.py`.
 
 | Mã | Số keyframe | Keyframe ở frame | Số frame có mặt | Keyframe / 100 frame | Thời gian (phút) | Chỗ khó |
 |---|---|---|---|---|---|---|
-| P1 | 10 | 0, 20, 30, 50, 60, 80, 100, 120, 140, 149 | 140 | 7.1 | ⚠️[?] | Đoạn bị P5 che 30–59, phải ước lượng box toàn thân sau kính |
-| P2 | 8 | 40, 50, 60, 70, 90, 110, 130, 149 | 110 | 7.3 | ⚠️[?] | Xuất hiện sau kính và bị che ngay khi vào; dừng rồi lùi lại ~110 |
-| P3 | 11 | 0, 7, 10, 20, 40, 60, 80, 100, 120, 140, 149 | 150 | 7.3 | ⚠️[?] | Bị cắt mép phải 0–39; box to gấp ~5 lần; tăng tốc cuối đoạn |
-| P4 | 6 | 0, 1, 21, 41, 61, 101 | 111 | 5.4 | ⚠️[?] | Bị bà áo xanh đi ngang che rồi mất hẳn |
-| P5 | 10 | 0, 7, 20, 28, 40, 60, 80, 100, 110, 130 | 130 | 7.7 | ⚠️[?] | Bị cắt mép trái; đổi tốc độ; bị che hai lần cuối đoạn |
-| **Tổng** | **45** | | **641** | **7.0** | ⚠️[?] | |
+| P1 | 10 | 0, 20, 30, 50, 60, 80, 100, 120, 140, 149 | 140 | 7.1 | 30p | Đoạn bị P5 che 30–59, phải ước lượng box toàn thân sau kính |
+| P2 | 8 | 40, 50, 60, 70, 90, 110, 130, 149 | 110 | 7.3 | 15p | Xuất hiện sau kính và bị che ngay khi vào; dừng rồi lùi lại ~110 |
+| P3 | 11 | 0, 7, 10, 20, 40, 60, 80, 100, 120, 140, 149 | 150 | 7.3 | 40p | Bị cắt mép phải 0–39; box to gấp ~5 lần; tăng tốc cuối đoạn |
+| P4 | 6 | 0, 1, 21, 41, 61, 101 | 111 | 5.4 | 15p | Bị bà áo xanh đi ngang che rồi mất hẳn |
+| P5 | 10 | 0, 7, 20, 28, 40, 60, 80, 100, 110, 130 | 130 | 7.7 | 30p | Bị cắt mép trái; đổi tốc độ; bị che hai lần cuối đoạn |
+| **Tổng** | **45** | | **641** | **7.0** | 130p | |
 
 Keyframe / 100 frame của cả bài = tổng keyframe ÷ tổng số frame có mặt × 100 = 45 ÷ 641 × 100 = **7.0**.
 
@@ -85,11 +85,11 @@ Lượt 1 theo người (đi ngược từ frame 149 về 0 trên CVAT), lượt
 
 | Frame | Mã người | Loại lỗi | Mô tả một câu | Phát hiện ở lượt | Đã sửa? |
 |---:|---|---|---|---|---|
-| 102–107 | P4 | `flag` | P4 bị bà áo xanh (không thuộc 5 người) che dần nhưng chưa bật `occluded` | 1 | ⚠️ Chưa |
-| 108–110 | P4 | `flag` | P4 đã khuất hẳn sau bà áo xanh nhưng vẫn còn box; `outside` bật muộn ở 111 | 2 | ⚠️ Chưa |
-| 111–119 | P5 | `flag` | P5 đi ra sau bà áo xanh, chỉ còn thấy một phần nhưng thiếu `occluded` | 1 | ⚠️ Chưa |
-| 125–129 | P5 | `lost` | Vẫn thấy chân P5 (quần be, giày đen) giữa bà áo xanh và P3 nhưng track đang `outside` | 2 | ⚠️ Chưa |
-| 137–139 | P5 | `flag` | P5 đã khuất hẳn sau P3 nhưng chưa bật `outside` (bật ở 140) | 1 | ⚠️ Chưa |
+| 102–107 | P4 | `flag` | P4 bị bà áo xanh (không thuộc 5 người) che dần nhưng chưa bật `occluded` | 1 | đã sửa |
+| 108–110 | P4 | `flag` | P4 đã khuất hẳn sau bà áo xanh nhưng vẫn còn box; `outside` bật muộn ở 111 | 2 | đã sửa |
+| 111–119 | P5 | `flag` | P5 đi ra sau bà áo xanh, chỉ còn thấy một phần nhưng thiếu `occluded` | 1 | đã sửa |
+| 125–129 | P5 | `lost` | Vẫn thấy chân P5 (quần be, giày đen) giữa bà áo xanh và P3 nhưng track đang `outside` | 2 | đã sửa |
+| 137–139 | P5 | `flag` | P5 đã khuất hẳn sau P3 nhưng chưa bật `outside` (bật ở 140) | 1 | đã sửa |
 
 Không phát hiện `id_switch`, `fragmentation`, `merge`, `false_track` hay `drift`: mỗi người giữ đúng một ID suốt đoạn, script không có cảnh báo nhảy tâm box, đổi chiều cao hay IoU chồng nhau.
 
@@ -116,7 +116,7 @@ Lỗi kiểu "box còn mà người đã mất" hoặc "người còn mà không
 | Tên file CVAT for video 1.1 | `src/exports/DuongQuocHuy_cvat_video.zip` |
 | Số track ID khác nhau trong `gt/gt.txt` (phải là 5) | 5 (ID 1–5, tổng 641 box) |
 | Frame `outside` không có dòng trong `gt.txt` (đúng / sai) | Đúng (ví dụ ID 2 = P1 không có dòng ở `frame_id` 41–50) |
-| Job đã completed trên CVAT máy cá nhân | ⚠️[CẦN ĐIỀN: Có / Chưa] |
+| Job đã completed trên CVAT máy cá nhân | đã completed |
 
 Dán phần tóm tắt in ra từ `src/check_submission.py`:
 
